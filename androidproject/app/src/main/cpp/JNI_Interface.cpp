@@ -1,12 +1,3 @@
-//  -------------------------------------------------------------------------
-//  Copyright (C) 2018 BMW Car IT GmbH
-//  All rights reserved.
-//  -------------------------------------------------------------------------
-//  This document contains proprietary information belonging to BMW Car IT.
-//  Passing on and copying of this document, use and communication of its
-//  contents is not permitted without prior written authorization.
-//  -------------------------------------------------------------------------
-
 #include <jni.h>
 #include <android/log.h>
 
@@ -20,13 +11,7 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_de_zombiepirates_GameRenderer_load(JNIEnv *env, jobject obj, jobject assetManager){
     AAssetManager *mgr = AAssetManager_fromJava(env, assetManager);
-    if (mgr == NULL) {
-        __android_log_print(ANDROID_LOG_ERROR, "name.cpp", "error loading asset manager");
-    } else {
-        __android_log_print(ANDROID_LOG_VERBOSE, "name.cpp", "loaded asset manager");
-        android_fopen_set_asset_manager(mgr);
-    }
-
+    android_fopen_set_asset_manager(mgr);
 }
 
 extern "C"
