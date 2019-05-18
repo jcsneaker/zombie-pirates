@@ -8,7 +8,6 @@
 //  -------------------------------------------------------------------------
 
 #include "PirateGame.h"
-#include "Shipfight.h"
 #include "IntroText.h"
 #include "Outro.h"
 #include "Wave.h"
@@ -25,21 +24,38 @@ PirateGame::PirateGame(int argc, char* argv[], uint32_t width, uint32_t height)
     , m_client("ramses-local-client-test", m_framework)
     , m_renderer(m_framework, m_rendererConfig)
     , m_display(m_renderer.createDisplay(m_displayConfig))
+    , m_engine(m_client, m_renderer, m_display)
 {
     Pos2D::SetWindowSize(width, height);
     m_framework.connect();
+
+    m_engine.pushScene();
+
+    m_shipFight.reset(new Shipfight(m_engine));
 }
 
 PirateGame::~PirateGame()
 {
+    m_engine.popScene();
+
     m_renderer.destroyDisplay(m_display);
 }
 
+void PirateGame::doFrame()
+{
+    m_shipFight->step();
+}
+
+bool PirateGame::finished() const
+{
+    return m_shipFight->fightIsOver();
+}
+
+/*
 void PirateGame::run()
 {
-    GameEngine engine(m_client, m_renderer, m_display);
 
-    /*if (!m_disableIntroText)
+    if (!m_disableIntroText)
     {
         engine.pushScene();
         {
@@ -47,24 +63,24 @@ void PirateGame::run()
             introText.goGoPowerRangers();
         }
         engine.popScene();
-    }*/
+    }
 
-    Wave zombiePiratesSong("res/zombie_pirates.wav");
-    zombiePiratesSong.play(true, true);
+    //Wave zombiePiratesSong("res/zombie_pirates.wav");
+    //zombiePiratesSong.play(true, true);
 
-    engine.pushScene();
+    m_engine.pushScene();
     {
-        Shipfight shipfight(engine);
+        Shipfight shipfight(m_engine);
         shipfight.goGoPowerRangers();
     }
-    /*engine.pushScene();
+    engine.pushScene();
     {
         Outro outro(engine);
         outro.goGoPowerRangers();
     }
-    engine.popScene();*/
+    m_engine.popScene();
 }
-
+*/
 ramses::DisplayConfig PirateGame::CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height)
 {
     ramses::DisplayConfig displayConfig(argc, argv);

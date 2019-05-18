@@ -15,6 +15,7 @@ namespace ramses_internal
         , m_tentaclesState(engine, m_scene)
         , m_ship1(engine, m_scene, EShip_LEFT, m_tentaclesState)
         , m_ship2(engine, m_scene, EShip_RIGHT, m_tentaclesState)
+        , m_startTime(PlatformTime::GetMillisecondsAbsolute())
     {
     }
 
@@ -22,72 +23,63 @@ namespace ramses_internal
     {
     }
 
-    void Shipfight::goGoPowerRangers()
+    bool Shipfight::fightIsOver() const
     {
-        const UInt64 startTime = PlatformTime::GetMillisecondsAbsolute();
-        float time = 0.0f;
+        return m_oneShipSank;
+    }
 
-        for (uint32_t i = 0; i < 3; ++i)
+    void Shipfight::step()
+    {
+        const float time = (PlatformTime::GetMillisecondsAbsolute() - m_startTime) / 1000.0f;
+
+        m_ship1.handleExplosions(time);
+        m_ship2.handleExplosions(time);
+
+        m_ship1.handleInput(time);
+        m_ship2.handleInput(time);
+
+        if (ETentacleState_SinkingShip == m_tentaclesState.getState())
         {
-            Vector3 savedShipTranslation(-1000.0f);
-
-            m_engine.fadeIn(1000);
-
-            Bool oneShipSunk = false;
-            while (!oneShipSunk)
+            if (m_savedShipTranslation.x == -1000.0f)
             {
-                time = (PlatformTime::GetMillisecondsAbsolute() - startTime) / 1000.0f;
-
-                m_ship1.handleExplosions(time);
-                m_ship2.handleExplosions(time);
-
-                m_ship1.handleInput(time);
-                m_ship2.handleInput(time);
-
-                if (ETentacleState_SinkingShip == m_tentaclesState.getState())
-                {
-                    if (savedShipTranslation.x == -1000.0f)
-                    {
-                        m_tentaclesState.getShip()->m_translateNode.getTranslation(savedShipTranslation.x, savedShipTranslation.y, savedShipTranslation.z);
-                    }
-
-                    Float timeDiff = time - m_tentaclesState.getSinkTimestamp();
-                    if (timeDiff > 8.0f)
-                    {
-                        oneShipSunk = true;
-                    }
-                    else
-                    {
-                        Float sinkOffset = 60.0f;
-
-                        if (m_tentaclesState.getShip()->getIdentity() == EShip_RIGHT)
-                        {
-                            sinkOffset = -sinkOffset;
-                        }
-
-                        m_tentaclesState.getShip()->m_translateNode.setTranslation(savedShipTranslation.x + sinkOffset * timeDiff, savedShipTranslation.y, savedShipTranslation.z);
-                    }
-                }
-                else
-                {
-                    processCollisions(m_ship1.getCannonCollisions(m_ship2, time), time);
-                    processCollisions(m_ship2.getCannonCollisions(m_ship1, time), time);
-                }
-
-                m_engine.updateSprites(time);
-                m_tentaclesState.update(time);
-
-                m_engine.doOneRendererLoop();
+                m_tentaclesState.getShip()->m_translateNode.getTranslation(m_savedShipTranslation.x, m_savedShipTranslation.y, m_savedShipTranslation.z);
             }
 
-            m_engine.fadeOut(4000);
+            Float timeDiff = time - m_tentaclesState.getSinkTimestamp();
+            if (timeDiff > 8.0f)
+            {
+                m_oneShipSank = true;
+            }
+            else
+            {
+                Float sinkOffset = 60.0f;
 
-            m_tentaclesState.getShip()->m_translateNode.setTranslation(savedShipTranslation.x, savedShipTranslation.y, savedShipTranslation.z);
-            m_tentaclesState.setShip(0);
-            m_tentaclesState.setState(ETentacleState_Underwater, time);
-            m_ship1.getDamage().resetDamage();
-            m_ship2.getDamage().resetDamage();
+                if (m_tentaclesState.getShip()->getIdentity() == EShip_RIGHT)
+                {
+                    sinkOffset = -sinkOffset;
+                }
+
+                m_tentaclesState.getShip()->m_translateNode.setTranslation(m_savedShipTranslation.x + sinkOffset * timeDiff, m_savedShipTranslation.y, m_savedShipTranslation.z);
+            }
         }
+        else
+        {
+            processCollisions(m_ship1.getCannonCollisions(m_ship2, time), time);
+            processCollisions(m_ship2.getCannonCollisions(m_ship1, time), time);
+        }
+
+        m_engine.updateSprites(time);
+        m_tentaclesState.update(time);
+
+        m_engine.doOneRendererLoop();
+
+        //m_engine.fadeOut(4000);
+
+        //m_tentaclesState.getShip()->m_translateNode.setTranslation(m_savedShipTranslation.x, m_savedShipTranslation.y, m_savedShipTranslation.z);
+        //m_tentaclesState.setShip(0);
+        //m_tentaclesState.setState(ETentacleState_Underwater, time);
+        //m_ship1.getDamage().resetDamage();
+        //m_ship2.getDamage().resetDamage();
     }
 
     void Shipfight::processCollisions(const CannonballCollisions& collisions, Float time)

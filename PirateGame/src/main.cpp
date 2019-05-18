@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
     PirateGame game(argc, argv, width, height);
 
-    while (true)
+    while (!game.finished())
     {
         game.doFrame();
     }

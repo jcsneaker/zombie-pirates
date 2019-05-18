@@ -17,6 +17,8 @@
 #include "ramses-client-api/RamsesClient.h"
 #include "ramses-renderer-api/RamsesRenderer.h"
 #include "Utils/Argument.h"
+#include "GameEngine.h"
+#include "Shipfight.h"
 
 class PirateGame
 {
@@ -24,7 +26,9 @@ public:
     PirateGame(int argc, char* argv[], uint32_t width, uint32_t height);
     ~PirateGame();
 
-    void run();
+    void doFrame();
+    bool finished() const;
+
 private:
     static ramses::DisplayConfig CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height);
 
@@ -38,6 +42,9 @@ private:
     ramses::RamsesRenderer  m_renderer;
 
     ramses::displayId_t     m_display;
+
+    ramses_internal::GameEngine m_engine;
+    std::unique_ptr<Shipfight> m_shipFight;
 };
 
 #endif

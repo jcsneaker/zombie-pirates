@@ -27,7 +27,8 @@ namespace ramses_internal
     public:
         Shipfight(GameEngine& engine);
         ~Shipfight();
-        void goGoPowerRangers();
+        void step();
+        bool fightIsOver() const;
     private:
 
         void processCollisions(const CannonballCollisions& collisions, Float time);
@@ -40,6 +41,9 @@ namespace ramses_internal
         TentaclesState m_tentaclesState;
         Ship m_ship1;
         Ship m_ship2;
+        const UInt64 m_startTime;
+        bool m_oneShipSank = false;
+        Vector3 m_savedShipTranslation = Vector3 (-1000.0f);
     };
 }
 
