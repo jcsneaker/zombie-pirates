@@ -4,6 +4,8 @@
 #include "Math3d/Vector4.h"
 #include "Math3d/Matrix44f.h"
 #include "Utils/LogMacros.h"
+#include "GameEngine.h"
+#include "Pos2D.h"
 
 
 

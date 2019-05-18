@@ -8,12 +8,11 @@
 //  -------------------------------------------------------------------------
 
 #include "PirateGame.h"
-#include "IntroText.h"
-#include "Outro.h"
 #include "Wave.h"
 #include "Utils/CommandLineParser.h"
 #include "ramses-renderer-api/DisplayConfig.h"
 #include "RamsesRendererImpl.h"
+#include "Pos2D.h"
 
 PirateGame::PirateGame(int argc, char* argv[], uint32_t width, uint32_t height)
     : m_parser(argc, argv)

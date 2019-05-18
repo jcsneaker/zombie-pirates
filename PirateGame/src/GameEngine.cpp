@@ -14,6 +14,7 @@
 #include "PlatformAbstraction/PlatformTime.h"
 #include "PlatformAbstraction/PlatformThread.h"
 #include "TGALoader.h"
+#include "Pos2D.h"
 
 namespace ramses_internal
 {

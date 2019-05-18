@@ -17,6 +17,8 @@ using namespace ramses;
 
 namespace ramses_internal
 {
+    class GameEngine;
+
     class Cannon : public TexturedSprite2D
     {
     public:

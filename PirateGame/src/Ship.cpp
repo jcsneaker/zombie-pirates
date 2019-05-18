@@ -3,6 +3,8 @@
 #include "Cannonball.h"
 #include "Explosion.h"
 #include "Tentacles.h"
+#include "GameEngine.h"
+#include "Pos2D.h"
 
 
 namespace ramses_internal

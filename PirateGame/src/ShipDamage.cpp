@@ -8,6 +8,7 @@
 //  -------------------------------------------------------------------------
 
 #include "ShipDamage.h"
+#include "GameEngine.h"
 
 #define FOREACH_FIRE(statement)                 \
 for(ShipFires::iterator fIter = m_shipFires.begin(); fIter != m_shipFires.end(); ++fIter)     \

@@ -8,6 +8,8 @@
 //  -------------------------------------------------------------------------
 
 #include "Cannonball.h"
+#include "GameEngine.h"
+#include "Pos2D.h"
 
 namespace ramses_internal
 {

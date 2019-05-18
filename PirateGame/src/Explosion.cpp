@@ -1,4 +1,5 @@
 #include "Explosion.h"
+#include "GameEngine.h"
 
 namespace ramses_internal
 {

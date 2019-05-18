@@ -13,7 +13,6 @@
 #include <ramses-client.h>
 #include "Collections/Pair.h"
 #include "Collections/Vector.h"
-#include "TextCreator.h"
 #include "ramses-client-api/UniformInput.h"
 #include "Math3d/Vector2.h"
 
@@ -21,6 +20,8 @@ using namespace ramses;
 
 namespace ramses_internal
 {
+    class GameEngine;
+
     class Sprite2D
     {
     public:

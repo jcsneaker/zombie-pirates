@@ -1,4 +1,5 @@
 #include "Crew.h"
+#include "GameEngine.h"
 
 namespace ramses_internal
 {

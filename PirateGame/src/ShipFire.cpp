@@ -8,6 +8,7 @@
 //  -------------------------------------------------------------------------
 
 #include "ShipFire.h"
+#include "GameEngine.h"
 
 namespace ramses_internal
 {

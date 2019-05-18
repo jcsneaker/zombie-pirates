@@ -1,5 +1,6 @@
 #include "Tentacles.h"
 #include "Ship.h"
+#include "GameEngine.h"
 
 #define FOREACH_TENTACLE(statement)             \
 for(TentacleVector::iterator tIter = m_tentacles.begin(); tIter != m_tentacles.end(); ++tIter)\

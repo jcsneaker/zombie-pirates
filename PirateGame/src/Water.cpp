@@ -1,4 +1,6 @@
 #include "Water.h"
+#include "Pos2D.h"
+#include "GameEngine.h"
 
 namespace ramses_internal
 {
@@ -10,9 +12,9 @@ namespace ramses_internal
         const float h = Pos2D::s_WindowHeight;
         std::vector<WaveConfig> waveConfigs =
         {
-            { {w / 3, w / 3}, {w / 3, w / 3}, 4, 5, 6},
-            { {w / 4, w / 4}, {w / 4, w / 4}, 4, 5, 6},
-            { {w / 5, w / 5}, {w / 5, w / 5}, 4, 5, 6},
+            { {w, h/6}, {w/2, h/2/*1.0f * (h / 8)*/}, 4, 5, 6},
+            { {w, h/6}, {w/2, h/2/*2.0f * (h / 8)*/}, 4, 5, 6},
+            { {w, h/6}, {w/2, h/2/*3.0f * (h / 8)*/}, 4, 5, 6},
         };
 
         for (auto& conf : waveConfigs)
