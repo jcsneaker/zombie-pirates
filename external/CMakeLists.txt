@@ -33,7 +33,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Android")
     set(RND_GENERIC ON)
 endif()
 
-set(ramses-sdk_ENABLE_TCP_SUPPORT               ON  CACHE BOOL "")
+set(ramses-sdk_ENABLE_TCP_SUPPORT               OFF CACHE BOOL "")
 
 set(ramses-sdk_BUILD_TESTS                      OFF CACHE BOOL "")
 set(ramses-sdk_BUILD_DEMOS                      OFF CACHE BOOL "")
