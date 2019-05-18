@@ -10,11 +10,10 @@
 #include <jni.h>
 #include <android/log.h>
 
-#include "ramses-client.h"
-#include "TriangleRenderer.h"
 #include "android/asset_manager.h"
 #include <android/asset_manager_jni.h>
 #include "ramses-capu/os/File.h"
+#include "NativeGameLifecycle.h"
 
 
 extern "C"
@@ -35,11 +34,9 @@ JNIEXPORT jlong JNICALL
 Java_de_zombiepirates_GameRenderer_createGameNative(JNIEnv *env, jobject instance,
                                                              jobject surface, jint width,
                                                              jint height) {
-
-    TriangleRenderer* tr = new TriangleRenderer(
+    NativeGameLifecycle* tr = new NativeGameLifecycle(
             env, instance, surface, width, height);
 
-    //tr->connect();
     tr->run();
     return reinterpret_cast<jlong>(tr);
 }
@@ -48,5 +45,5 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_de_zombiepirates_GameRenderer_disposeGameNative(JNIEnv* /*env*/, jobject /*instance*/,
                                                               jlong handle) {
-    delete reinterpret_cast<TriangleRenderer*>(handle);
+    delete reinterpret_cast<NativeGameLifecycle*>(handle);
 }
