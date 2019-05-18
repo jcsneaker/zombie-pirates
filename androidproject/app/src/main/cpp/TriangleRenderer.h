@@ -10,7 +10,6 @@
 #ifndef RAMSES_TRIANGLERENDERER_H
 #define RAMSES_TRIANGLERENDERER_H
 
-#include "RendererBundle.h"
 #include "PirateGame.h"
 #include <jni.h>
 
@@ -20,6 +19,7 @@ namespace ramses
     class RamsesClient;
     class Scene;
 }
+class ANativeWindow;
 
 class TriangleRenderer {
 public:

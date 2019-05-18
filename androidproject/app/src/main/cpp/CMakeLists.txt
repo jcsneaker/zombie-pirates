@@ -16,17 +16,19 @@ file(GLOB
     RAMSES_ANDROIDINTERFACE_FILES_SOURCE
     *.cpp)
 
-
 add_library(zombiepirates_android SHARED
             ${RAMSES_ANDROIDINTERFACE_FILES_SOURCE})
 
 # Include libraries needed for gles3jni lib
 target_link_libraries(zombiepirates_android
-        ramses-renderer-lib
+
         ZombiePiratesGame
+        ramses-renderer-lib
             GLESv3
             android
             EGL
             log
             m
         )
+
+

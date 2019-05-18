@@ -1,4 +1,3 @@
-androidproject/androidproject.iml
 
 # Prerequisites
 *.d
@@ -36,3 +35,4 @@ local.properties
 .google
 .externalNativeBuild
 build/
+androidproject/androidproject.iml

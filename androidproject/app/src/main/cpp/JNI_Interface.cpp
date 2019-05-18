@@ -10,7 +10,6 @@
 #include <jni.h>
 #include <android/log.h>
 
-#include "RendererBundle.h"
 #include "ramses-client.h"
 #include "TriangleRenderer.h"
 #include "android/asset_manager.h"
