@@ -18,7 +18,7 @@
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_de_zombiepirates_load(JNIEnv *env, jobject obj, jobject assetManager){
+Java_de_zombiepirates_GameRenderer_load(JNIEnv *env, jobject obj, jobject assetManager){
     AAssetManager *mgr = AAssetManager_fromJava(env, assetManager);
     if (mgr == NULL) {
         __android_log_print(ANDROID_LOG_ERROR, "name.cpp", "error loading asset manager");
