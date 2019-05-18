@@ -24,7 +24,7 @@ namespace ramses_internal
         Vector2 size;
         Float jiggleSpeed;
         Float jiggleDistance;
-        Float rotation;
+        Float timeOffset;
     };
 
 
@@ -37,6 +37,7 @@ namespace ramses_internal
 
     private:
         WaveConfig m_config;
+        ramses::Node& m_additionalTranslate;
     };
 
     class Water

@@ -10,12 +10,20 @@ namespace ramses_internal
     {
         const float w = Pos2D::s_WindowWidth;
         const float h = Pos2D::s_WindowHeight;
-        std::vector<WaveConfig> waveConfigs =
+
+        int waveCount = 6;
+        float waveVerticalSlice = 1.0f / (waveCount-1);
+
+        std::vector<WaveConfig> waveConfigs;
+        for (int i = 0; i < waveCount; ++i)
         {
-            {{w / 2, h / 2/*1.0f * (h / 8)*/}, {w, h / 6}, 4, 5, 6},
-            {{w / 2, h / 2/*2.0f * (h / 8)*/}, {w, h / 6}, 4, 5, 6},
-            {{w / 2, h / 2/*3.0f * (h / 8)*/}, {w, h / 6}, 4, 5, 6},
-        };
+            waveConfigs.push_back(
+                { {w * 0.25f, i * h * waveVerticalSlice}, {w / 2, h *waveVerticalSlice }, 4, 8, 5.0f / (1+(i * 25634) % 15) }
+            );
+            waveConfigs.push_back(
+                { {w * 0.75f, i * h * waveVerticalSlice}, {w / 2, h *waveVerticalSlice }, 4, 8, 5.0f / (1+(i * 2534) % 15) }
+            );
+        }
 
         for (auto& conf : waveConfigs)
         {
@@ -34,15 +42,24 @@ namespace ramses_internal
     Wave::Wave(GameEngine& engine, ramses::Scene& scene, WaveConfig waveConfig)
         : AnimatedSprite2D(engine, scene, engine.WaterTexture, engine.TexturedQuadEffect)
         , m_config(waveConfig)
+        , m_additionalTranslate(*scene.createNode())
     {
         setPosition(waveConfig.offset.x, waveConfig.offset.y);
         setSize(waveConfig.size.x, waveConfig.size.y);
         setBlending(false);
+
+        ramses::Node* currentParent = m_translateNode.getParent();
+        m_translateNode.setParent(m_additionalTranslate);
+        if(nullptr != currentParent)
+            m_additionalTranslate.setParent(*currentParent);
     }
 
     void Wave::updateTime(float time)
     {
-        AnimatedSprite2D::updateTime(time);
+        Vector2 translate = Vector2(0.0f);
+        Float modifiedTime = time * m_config.jiggleSpeed;
+        translate += m_config.jiggleDistance * Vector2(pow(sin(modifiedTime + m_config.timeOffset), 4), -pow(cos(modifiedTime + m_config.timeOffset), 4));
+        m_additionalTranslate.setTranslation(translate.x, translate.y, 0);
     }
 
 }
