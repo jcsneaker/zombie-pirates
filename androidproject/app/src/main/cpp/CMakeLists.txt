@@ -12,17 +12,21 @@ cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -fno-exceptions -Wall")
 
+file(GLOB
+    RAMSES_ANDROIDINTERFACE_FILES_SOURCE
+    *.cpp)
+
+
 add_library(gles3jni SHARED
-            gles3jni.cpp
-            RendererES3.cpp)
+            ${RAMSES_ANDROIDINTERFACE_FILES_SOURCE})
 
 # Include libraries needed for gles3jni lib
 target_link_libraries(gles3jni
+        ramses-renderer-lib
         ZombiePiratesGame
             GLESv3
             android
             EGL
             log
-            m)
-
-
+            m
+        )

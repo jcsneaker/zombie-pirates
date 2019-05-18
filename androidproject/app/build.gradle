@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId 'com.android.gles3jni'
+        applicationId 'com.android.MainActivity'
         minSdkVersion "${platformVersion}"
         targetSdkVersion 28
         externalNativeBuild {
@@ -42,4 +42,8 @@ android {
             path 'CMakeLists.txt'
         }
     }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }

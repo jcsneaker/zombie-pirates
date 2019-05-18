@@ -35,22 +35,25 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Android")
 endif()
 
 set(ramses_dependencies
+ramses-framework-api
+ramses-framework
 	ramses-client-api
 	ramses-client
 	ramses-renderer-api
-	ramses-renderer-lib
+    ramses-renderer-lib
 	${RND_PLATFORM}
-	ramses-framework-api
-	ramses-framework)
+
+
+  )
 
 IF (${CMAKE_SYSTEM_NAME} MATCHES "Android")
-add_library(ZombiePiratesGame SHARED
+add_library(ZombiePiratesGame STATIC
             ${source_files})
 ELSE()
 add_executable(ZombiePiratesGame ${source_files})
 ENDIF()
 
-target_link_libraries(ZombiePiratesGame ${ramses_dependencies})
+target_link_libraries(ZombiePiratesGame   ${ramses_dependencies} )
 target_include_directories(ZombiePiratesGame PRIVATE PirateGame/include)
 
 # TODO check if this is the right place
