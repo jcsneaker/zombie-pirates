@@ -7,13 +7,21 @@
 //  contents is not permitted without prior written authorization.
 //  -------------------------------------------------------------------------
 
+#ifdef WIN32
+
 #include "PirateGame.h"
 
-//int main(int argc, char* argv[])
-//{
-//    const int32_t width = 1480;
-//    const int32_t height = 980;
-//
-//    PirateGame game(argc, argv, width, height);
-//    game.run();
-//}
+int main(int argc, char* argv[])
+{
+    const int32_t width = 1480;
+    const int32_t height = 980;
+
+    PirateGame game(argc, argv, width, height);
+
+    while (true)
+    {
+        game.doFrame();
+    }
+}
+
+#endif
