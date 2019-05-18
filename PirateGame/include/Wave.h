@@ -22,12 +22,12 @@ using namespace std;
 
 namespace ramses_internal
 {
-    class Wave
+    /*class Wave
     {
     public:
         Wave(char * filename)
         {
-            /*HInstance = GetModuleHandle(0);
+            HInstance = GetModuleHandle(0);
 
             ifstream infile(filename, ios::binary);
 
@@ -39,7 +39,7 @@ namespace ramses_internal
             infile.seekg(0, ios::beg);   // position to start of file
             infile.read(&buffer[0], length);  // read entire file
 
-            infile.close();*/
+            infile.close();
         }
 
         ~Wave()
@@ -49,7 +49,7 @@ namespace ramses_internal
 
         void play(bool async = false, bool loop = false)
         {
-            /*uint32_t flags = SND_MEMORY;
+            uint32_t flags = SND_MEMORY;
             if (async)
             {
                 flags |= SND_ASYNC;
@@ -59,7 +59,7 @@ namespace ramses_internal
                 flags |= SND_LOOP;
             }
 
-            PlaySound(&buffer[0], HInstance, flags);*/
+            PlaySound(&buffer[0], HInstance, flags);
         }
 
         void stop()
@@ -70,7 +70,7 @@ namespace ramses_internal
     private:
         std::vector<char> buffer;
         //HINSTANCE HInstance;
-    };
+    };*/
 }
 
 #endif

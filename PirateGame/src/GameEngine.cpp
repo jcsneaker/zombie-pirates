@@ -48,7 +48,6 @@ namespace ramses_internal
         , TexturedQuadEffect(createEffect("res/default.vert", "res/textured_rgba.frag"))
         , TexturedQuadEffectWithFade(createEffect("res/default.vert", "res/textured_rgba_with_fade.frag"))
         , ShipEffect(createEffect("res/default.vert", "res/ship.frag"))
-        , WaterEffect(createEffect("res/water.vert", "res/water.frag"))
         , OutroWaterEffect(createEffect("res/water.vert", "res/water_outro.frag"))
         , TextEffect(createEffect("res/textEffect.vert", "res/textEffect.frag"))
         , CannonEffect(createEffect("res/cannon.vert", "res/cannon.frag"))
@@ -67,6 +66,7 @@ namespace ramses_internal
         , LittleFire2(*TGALoader::LoadTga("res/littleFire2.tga", client))
         , MediumFire(*TGALoader::LoadTga("res/mediumFire.tga", client))
         , OmgOmgOmg(*TGALoader::LoadTga("res/omgOmgOmg.tga", client))
+        , WaterTexture(*ramses::RamsesUtils::CreateTextureResourceFromPng("res/waves.png", client))
         , Johnny(*TGALoader::LoadTga("res/johnny.tga", client))
         , Carol(*TGALoader::LoadTga("res/carol.tga", client))
         , Max(*TGALoader::LoadTga("res/max.tga", client))
@@ -91,7 +91,6 @@ namespace ramses_internal
         m_client.destroy(QuadTexCoords);
         m_client.destroy(QuadIndices);
         m_client.destroy(ShipEffect);
-        m_client.destroy(WaterEffect);
         m_client.destroy(TextEffect);
         m_client.destroy(CannonEffect);
         m_client.destroy(CannonballEffect);

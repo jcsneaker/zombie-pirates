@@ -17,10 +17,39 @@ using namespace ramses_internal;
 
 namespace ramses_internal
 {
-    class Water : public Sprite2D
+
+    struct WaveConfig
+    {
+        Vector2 offset;
+        Vector2 size;
+        Float jiggleSpeed;
+        Float jiggleDistance;
+        Float rotation;
+    };
+
+
+    class Wave : public AnimatedSprite2D
+    {
+    public:
+        Wave(GameEngine& engine, ramses::Scene& scene, WaveConfig config);
+
+        virtual void updateTime(float time) override;
+
+    private:
+        WaveConfig m_config;
+    };
+
+    class Water
     {
     public:
         Water(GameEngine& engine, ramses::Scene& scene);
+        ~Water();
+
+    private:
+        GameEngine& m_engine;
+        ramses::Scene& m_scene;
+
+        std::vector<Wave*> m_waves;
     };
 }
 

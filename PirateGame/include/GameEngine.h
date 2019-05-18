@@ -143,7 +143,6 @@ namespace ramses_internal
         const ramses::Effect& TexturedQuadEffect;
         const ramses::Effect& TexturedQuadEffectWithFade;
         const ramses::Effect& ShipEffect;
-        const ramses::Effect& WaterEffect;
         const ramses::Effect& OutroWaterEffect;
         const ramses::Effect& TextEffect;
         const ramses::Effect& CannonEffect;
@@ -163,6 +162,7 @@ namespace ramses_internal
         const Texture2D& LittleFire2;
         const Texture2D& MediumFire;
         const Texture2D& OmgOmgOmg;
+        const Texture2D& WaterTexture;
 
         const Texture2D& Johnny;
         const Texture2D& Carol;
@@ -175,9 +175,6 @@ namespace ramses_internal
         const Texture2D& LeftTentacle;
         const Texture2D& RightFatTentacle;
         const Texture2D& RightSlimTentacle;
-
-        //const TextFontConfig FontConfig;
-        //const TextFont& Font;
     };
 }
 
