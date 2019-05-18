@@ -143,7 +143,6 @@ namespace ramses_internal
         const ramses::Effect& TexturedQuadEffect;
         const ramses::Effect& TexturedQuadEffectWithFade;
         const ramses::Effect& ShipEffect;
-        const ramses::Effect& OutroWaterEffect;
         const ramses::Effect& TextEffect;
         const ramses::Effect& CannonEffect;
         const ramses::Effect& CannonballEffect;

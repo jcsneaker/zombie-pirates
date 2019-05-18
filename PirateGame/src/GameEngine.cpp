@@ -48,7 +48,6 @@ namespace ramses_internal
         , TexturedQuadEffect(createEffect("res/default.vert", "res/textured_rgba.frag"))
         , TexturedQuadEffectWithFade(createEffect("res/default.vert", "res/textured_rgba_with_fade.frag"))
         , ShipEffect(createEffect("res/default.vert", "res/ship.frag"))
-        , OutroWaterEffect(createEffect("res/water.vert", "res/water_outro.frag"))
         , TextEffect(createEffect("res/textEffect.vert", "res/textEffect.frag"))
         , CannonEffect(createEffect("res/cannon.vert", "res/cannon.frag"))
         , CannonballEffect(createEffect("res/default.vert", "res/textured_rgba.frag"))
@@ -77,8 +76,6 @@ namespace ramses_internal
         , LeftTentacle(*TGALoader::LoadTga("res/lefttentacle.tga", client))
         , RightFatTentacle(*TGALoader::LoadTga("res/rightfattentacle.tga", client))
         , RightSlimTentacle(*TGALoader::LoadTga("res/rightslimtentacle.tga", client))
-        //, FontConfig(ETextEngine_Freetype2, "res/piratefont2.ttf")
-        //, Font(*client.createTextFont(FontConfig))
     {
         m_renderer.startThread();
     }
