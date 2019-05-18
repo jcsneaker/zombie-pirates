@@ -35,4 +35,4 @@ local.properties
 .google
 .externalNativeBuild
 build/
-androidproject/androidproject.iml
+*.iml
