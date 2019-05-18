@@ -10,8 +10,8 @@
 #ifndef RAMSES_WAVE_H
 #define RAMSES_WAVE_H
 
-#include "windows.h"
-#include <mmsystem.h>
+//#include "windows.h"
+//#include <mmsystem.h>
 #include <iostream>
 #include <fstream>
 #include <conio.h>
@@ -27,7 +27,7 @@ namespace ramses_internal
     public:
         Wave(char * filename)
         {
-            HInstance = GetModuleHandle(0);
+            /*HInstance = GetModuleHandle(0);
 
             ifstream infile(filename, ios::binary);
 
@@ -39,7 +39,7 @@ namespace ramses_internal
             infile.seekg(0, ios::beg);   // position to start of file
             infile.read(&buffer[0], length);  // read entire file
 
-            infile.close();
+            infile.close();*/
         }
 
         ~Wave()
@@ -49,7 +49,7 @@ namespace ramses_internal
 
         void play(bool async = false, bool loop = false)
         {
-            uint32_t flags = SND_MEMORY;
+            /*uint32_t flags = SND_MEMORY;
             if (async)
             {
                 flags |= SND_ASYNC;
@@ -59,17 +59,17 @@ namespace ramses_internal
                 flags |= SND_LOOP;
             }
 
-            PlaySound(&buffer[0], HInstance, flags);
+            PlaySound(&buffer[0], HInstance, flags);*/
         }
 
         void stop()
         {
-            PlaySound(NULL, 0, 0); // STOP ANY PLAYING SOUND
+            //PlaySound(NULL, 0, 0); // STOP ANY PLAYING SOUND
         }
 
     private:
         std::vector<char> buffer;
-        HINSTANCE HInstance;
+        //HINSTANCE HInstance;
     };
 }
 

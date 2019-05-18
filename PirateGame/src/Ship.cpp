@@ -146,9 +146,14 @@ namespace ramses_internal
 
     void Ship::handleInput(float time)
     {
-        Bool upPressed   = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? 'W' : VK_UP));
-        Bool downPressed = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? 'S' : VK_DOWN));
-        Bool firePressed = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? VK_SPACE : VK_RETURN));
+        // TODO rework for android
+        //Bool upPressed   = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? 'W' : VK_UP));
+        //Bool downPressed = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? 'S' : VK_DOWN));
+        //Bool firePressed = 0 != ((1 << 16) & GetAsyncKeyState(m_whoAmI == EShip_LEFT ? VK_SPACE : VK_RETURN));
+
+        Bool upPressed = int32_t(time * 1000) % 500 > 250;
+        Bool downPressed = int32_t(time * 1000) % 500 < 250;
+        Bool firePressed = int32_t(time * 1000) % 500 > 400;
 
         if (upPressed && !downPressed)
         {
