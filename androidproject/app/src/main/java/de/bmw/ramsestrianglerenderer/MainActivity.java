@@ -1,5 +1,6 @@
 package de.bmw.ramsestrianglerenderer;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -9,7 +10,7 @@ import android.app.Activity;
 import de.bmw.ramses.RamsesTriangleRenderer;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback{
-
+    private AssetManager mgr;
     static {
         System.loadLibrary("gles3jni");
         Log.v("MyActivity", "loaded lib");
@@ -19,6 +20,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("MyActivity", "onCreate");
         super.onCreate(savedInstanceState);
+        mgr = getResources().getAssets();
+        Log.v("MyActivity", "remember assmanager");
         setContentView(R.layout.activity_main);
 
         SurfaceView surfaceView = (SurfaceView) findViewById(R.id.surfaceView);
@@ -37,7 +40,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
             ramsesTriangleRenderer.dispose();
         }
 
-        ramsesTriangleRenderer = new RamsesTriangleRenderer(holder.getSurface(), width, height);
+        ramsesTriangleRenderer = new RamsesTriangleRenderer(holder.getSurface(),mgr, width, height);
     }
 
     @Override

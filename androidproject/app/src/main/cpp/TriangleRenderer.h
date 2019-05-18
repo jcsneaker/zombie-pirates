@@ -11,6 +11,8 @@
 #define RAMSES_TRIANGLERENDERER_H
 
 #include "RendererBundle.h"
+#include "PirateGame.h"
+#include <jni.h>
 
 namespace ramses
 {
@@ -19,21 +21,19 @@ namespace ramses
     class Scene;
 }
 
-class TriangleRenderer : public RendererBundle {
+class TriangleRenderer {
 public:
     TriangleRenderer(JNIEnv *env, jobject instance,
                                  jobject javaSurface, jint width, jint height);
 
     virtual ~TriangleRenderer();
-
-    virtual void run() override;
+    void run();
 
     void frameCallback(long frameTimeNanos);
 
 private:
-    std::unique_ptr<ramses::RamsesClient> m_client;
-    ramses::Scene* m_scene;
-    ramses::Node* m_rotateNode;
+    ANativeWindow* m_nativeWindow;
+    std::unique_ptr<PirateGame> m_game;
     long m_lastFrameTime;
 };
 

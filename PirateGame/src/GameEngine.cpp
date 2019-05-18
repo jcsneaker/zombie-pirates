@@ -15,6 +15,7 @@
 #include "PlatformAbstraction/PlatformThread.h"
 #include "TGALoader.h"
 #include "Pos2D.h"
+#include <android/log.h>
 
 namespace ramses_internal
 {
@@ -167,19 +168,20 @@ namespace ramses_internal
         {
             doOneRendererLoop();
         }
-
+__android_log_print(ANDROID_LOG_ERROR, "RamsesNativeInterface", "ass: going to map!");
         m_renderer.mapScene(m_display, newSceneId);
         while (!sceneInState(newSceneId, SceneData::ESceneState_Mapped))
         {
             doOneRendererLoop();
         }
-
+__android_log_print(ANDROID_LOG_ERROR, "RamsesNativeInterface", "ass: going to show!");
         m_renderer.showScene(newSceneId);
-        while (!sceneInState(newSceneId, SceneData::ESceneState_Mapped))
+        while (!sceneInState(newSceneId, SceneData::ESceneState_Rendered))
         {
+          __android_log_print(ANDROID_LOG_ERROR, "RamsesNativeInterface", "ass: waiting for show!");
             doOneRendererLoop();
         }
-
+__android_log_print(ANDROID_LOG_ERROR, "RamsesNativeInterface", "ass: was show!");
         return newScene;
     }
 

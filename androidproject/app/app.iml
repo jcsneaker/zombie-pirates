@@ -151,6 +151,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundle_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/cmake" />
@@ -208,6 +209,9 @@
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/include/ramses-capu">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/include/ramses-capu" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/src/os/Android">
+      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/src/os/Android" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/src/os/Posix">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/src/os/Posix" isTestSource="false" />

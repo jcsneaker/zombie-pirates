@@ -8,21 +8,39 @@
 //  -------------------------------------------------------------------------
 
 #include <jni.h>
+#include <android/log.h>
 
 #include "RendererBundle.h"
 #include "ramses-client.h"
 #include "TriangleRenderer.h"
+#include "android/asset_manager.h"
+#include <android/asset_manager_jni.h>
+#include "ramses-capu/os/File.h"
 
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_de_bmw_ramses_RamsesTriangleRenderer_load(JNIEnv *env, jobject obj, jobject assetManager){
+    AAssetManager *mgr = AAssetManager_fromJava(env, assetManager);
+    if (mgr == NULL) {
+        __android_log_print(ANDROID_LOG_ERROR, "name.cpp", "error loading asset manager");
+    } else {
+        __android_log_print(ANDROID_LOG_VERBOSE, "name.cpp", "loaded asset manager");
+        android_fopen_set_asset_manager(mgr);
+    }
+
+}
 
 extern "C"
 JNIEXPORT jlong JNICALL
 Java_de_bmw_ramses_RamsesTriangleRenderer_createTriangleRendererNative(JNIEnv *env, jobject instance,
                                                              jobject surface, jint width,
                                                              jint height) {
+
     TriangleRenderer* tr = new TriangleRenderer(
             env, instance, surface, width, height);
 
-    tr->connect();
+    //tr->connect();
     tr->run();
     return reinterpret_cast<jlong>(tr);
 }

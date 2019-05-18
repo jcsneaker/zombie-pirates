@@ -14,12 +14,10 @@
 #include "RamsesRendererImpl.h"
 #include "Pos2D.h"
 
-PirateGame::PirateGame(int argc, char* argv[], uint32_t width, uint32_t height)
-    : m_parser(argc, argv)
-    , m_disableIntroText(m_parser, "ni", "noIntroText", false, "Disable intro text")
-    , m_rendererConfig(argc, argv)
-    , m_displayConfig(CreateDisplayConfig(argc, argv, width, height))
-    , m_framework(argc, argv)
+PirateGame::PirateGame(uint32_t width, uint32_t height)
+    :  m_rendererConfig()
+    , m_displayConfig(CreateDisplayConfig( width, height))
+    , m_framework()
     , m_client("ramses-local-client-test", m_framework)
     , m_renderer(m_framework, m_rendererConfig)
     , m_display(m_renderer.createDisplay(m_displayConfig))
@@ -80,9 +78,9 @@ void PirateGame::run()
     m_engine.popScene();
 }
 */
-ramses::DisplayConfig PirateGame::CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height)
+ramses::DisplayConfig PirateGame::CreateDisplayConfig(uint32_t width, uint32_t height)
 {
-    ramses::DisplayConfig displayConfig(argc, argv);
+    ramses::DisplayConfig displayConfig;
     displayConfig.setWindowRectangle(0, 25, width, height);
     displayConfig.setOrthographicProjection(0, width * 1.0f, 0, height * 1.0f, -100.0f, 100.0f);
 

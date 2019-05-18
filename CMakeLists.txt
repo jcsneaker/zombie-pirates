@@ -54,7 +54,7 @@ add_executable(ZombiePiratesGame ${source_files})
 ENDIF()
 
 target_link_libraries(ZombiePiratesGame   ${ramses_dependencies} )
-target_include_directories(ZombiePiratesGame PRIVATE PirateGame/include)
+target_include_directories(ZombiePiratesGame PUBLIC PirateGame/include)
 
 # TODO check if this is the right place
 add_definitions(-DRAMSES_LINK_STATIC)

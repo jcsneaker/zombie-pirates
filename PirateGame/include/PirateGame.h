@@ -23,17 +23,15 @@
 class PirateGame
 {
 public:
-    PirateGame(int argc, char* argv[], uint32_t width, uint32_t height);
+    PirateGame( uint32_t width, uint32_t height);
     ~PirateGame();
 
     void doFrame();
     bool finished() const;
 
 private:
-    static ramses::DisplayConfig CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height);
+    static ramses::DisplayConfig CreateDisplayConfig( uint32_t width, uint32_t height);
 
-    ramses_internal::CommandLineParser       m_parser;
-    ramses_internal::ArgumentBool m_disableIntroText;
     ramses::RendererConfig  m_rendererConfig;
     ramses::DisplayConfig   m_displayConfig;
 
