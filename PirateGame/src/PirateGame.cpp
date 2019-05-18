@@ -16,14 +16,11 @@
 #include "ramses-renderer-api/DisplayConfig.h"
 #include "RamsesRendererImpl.h"
 
-static const int32_t width = 1480;
-static const int32_t height = 980;
-
-PirateGame::PirateGame(int argc, char* argv[])
+PirateGame::PirateGame(int argc, char* argv[], uint32_t width, uint32_t height)
     : m_parser(argc, argv)
     , m_disableIntroText(m_parser, "ni", "noIntroText", false, "Disable intro text")
     , m_rendererConfig(argc, argv)
-    , m_displayConfig(CreateDisplayConfig(argc, argv))
+    , m_displayConfig(CreateDisplayConfig(argc, argv, width, height))
     , m_framework(argc, argv)
     , m_client("ramses-local-client-test", m_framework)
     , m_renderer(m_framework, m_rendererConfig)
@@ -68,7 +65,7 @@ void PirateGame::run()
     engine.popScene();*/
 }
 
-ramses::DisplayConfig PirateGame::CreateDisplayConfig(int argc, char* argv[])
+ramses::DisplayConfig PirateGame::CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height)
 {
     ramses::DisplayConfig displayConfig(argc, argv);
     displayConfig.setWindowRectangle(0, 25, width, height);

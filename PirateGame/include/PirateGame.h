@@ -21,12 +21,12 @@
 class PirateGame
 {
 public:
-    PirateGame(int argc, char* argv[]);
+    PirateGame(int argc, char* argv[], uint32_t width, uint32_t height);
     ~PirateGame();
 
     void run();
 private:
-    static ramses::DisplayConfig CreateDisplayConfig(int argc, char* argv[]);
+    static ramses::DisplayConfig CreateDisplayConfig(int argc, char* argv[], uint32_t width, uint32_t height);
 
     ramses_internal::CommandLineParser       m_parser;
     ramses_internal::ArgumentBool m_disableIntroText;

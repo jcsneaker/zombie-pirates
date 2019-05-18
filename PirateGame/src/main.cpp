@@ -7,10 +7,13 @@
 //  contents is not permitted without prior written authorization.
 //  -------------------------------------------------------------------------
 
-//#include "PirateGame.h"
-//
+#include "PirateGame.h"
+
 //int main(int argc, char* argv[])
 //{
-//    PirateGame game(argc, argv);
+//    const int32_t width = 1480;
+//    const int32_t height = 980;
+//
+//    PirateGame game(argc, argv, width, height);
 //    game.run();
 //}
