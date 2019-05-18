@@ -1,6 +1,7 @@
 package de.bmw.ramsestrianglerenderer;
 
 import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -11,6 +12,7 @@ import de.bmw.ramses.RamsesTriangleRenderer;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback{
     private AssetManager mgr;
+    MediaPlayer mPlayer;
     static {
         System.loadLibrary("gles3jni");
         Log.v("MyActivity", "loaded lib");
@@ -26,6 +28,30 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
 
         SurfaceView surfaceView = (SurfaceView) findViewById(R.id.surfaceView);
         surfaceView.getHolder().addCallback(this);
+
+        mPlayer = MediaPlayer.create(this, R.raw.pirates);
+        mPlayer.start();
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        mPlayer.pause();
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        mPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        mPlayer.stop();
     }
 
     @Override
