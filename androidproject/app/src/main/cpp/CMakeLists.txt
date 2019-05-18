@@ -10,7 +10,6 @@ file(GLOB
 add_library(zombiepirates_android SHARED
             ${SOURCES})
 
-# Include libraries needed for gles3jni lib
 target_link_libraries(zombiepirates_android
         ZombiePiratesGame
         ramses-renderer-lib
