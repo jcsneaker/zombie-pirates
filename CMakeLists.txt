@@ -17,16 +17,12 @@ set (ZombiePiratesGame_VERSION_MINOR 1)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
-#include(cmake/setCmakePolicies.cmake NO_POLICY_SCOPE)  # we want to propagate policy settings out!
-#include(cmake/removeFromFlags.cmake)
-#include(cmake/platformConfig.cmake)
-
 add_subdirectory(external)
 
 # TODO after first version is done, refactor project structure
 file(GLOB source_files
     PirateGame/src/*.cpp
-    PirateGame/src/include/*.h
+    PirateGame/include/*.h
 )
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
