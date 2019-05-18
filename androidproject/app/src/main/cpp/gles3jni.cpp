@@ -261,11 +261,12 @@ Java_com_android_gles3jni_GLES3JNILib_init(JNIEnv* env, jobject obj) {
     printGlString("Renderer", GL_RENDERER);
     printGlString("Extensions", GL_EXTENSIONS);
 
+
+
+
     const char* versionStr = (const char*)glGetString(GL_VERSION);
     if (strstr(versionStr, "OpenGL ES 3.") && gl3stubInit()) {
         g_renderer = createES3Renderer();
-    } else if (strstr(versionStr, "OpenGL ES 2.")) {
-        g_renderer = createES2Renderer();
     } else {
         ALOGE("Unsupported OpenGL ES version");
     }

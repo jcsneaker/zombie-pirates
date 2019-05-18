@@ -32,6 +32,53 @@
     <output url="file://$MODULE_DIR$/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/javac/debugUnitTest/compileDebugUnitTestJavaWithJavac/classes" />
     <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../.." isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/generated/source/r" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotation_processor_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundle_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/cmake" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/duplicate_classes_check" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-apk" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_app_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_app_info_output_file" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_main_apk_resources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_split_apk_resources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifest-checker" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_assets" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_jni_libs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/metadata_feature_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processed_res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/resources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/signing_config" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/validate_signing_config" />
+      <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../PirateGame/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../PirateGame/src" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/debug" isTestSource="false" generated="true" />
@@ -102,45 +149,35 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundle_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/cmake" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/duplicate_classes_check" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_app_manifest" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_app_info_output_file" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_main_apk_resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_split_apk_resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifest-checker" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_assets" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_jni_libs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/metadata_feature_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processed_res" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/signing_config" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/validate_signing_config" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/client/ramses-client/impl">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/client/ramses-client/impl" isTestSource="false" />
@@ -159,156 +196,6 @@
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/client/ramses-text/ramses-text-api">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/client/ramses-text/ramses-text-api" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-offscreen-rendering/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-offscreen-rendering/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-layout-demo/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-layout-demo/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-layout-demo/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-layout-demo/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-shadow-demo/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-shadow-demo/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-shadow-demo/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/demo/ramses-text-shadow-demo/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation-realtime/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation-realtime/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation-realtime/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation-realtime/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-animation/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-blending/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-blending/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-blending/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-blending/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-compositing/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-compositing/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-compositing/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-compositing/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-effect-from-glsl/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-effect-from-glsl/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-effect-from-glsl/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-effect-from-glsl/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-file-loading/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-file-loading/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-file-loading/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-file-loading/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-geometry/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-geometry/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-geometry/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-geometry/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendergroups/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendergroups/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendergroups/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendergroups/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-renderpasses/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-renderpasses/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-renderpasses/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-renderpasses/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendertarget/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendertarget/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendertarget/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-rendertarget/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-scenegraph/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-scenegraph/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-scenegraph/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-scenegraph/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-texturing/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-texturing/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-texturing/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-basic-texturing/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-texture/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-texture/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-texture/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-texture/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-vertices/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-vertices/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-vertices/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-data-buffers-vertices/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-geometry-instancing/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-geometry-instancing/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-geometry-instancing/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-geometry-instancing/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-client/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-client/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-client/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-client/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-datalink/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-datalink/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-datalink/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-datalink/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-displays/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-displays/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-displays/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-displays/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-offscreenbuffer/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-offscreenbuffer/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-offscreenbuffer/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-local-offscreenbuffer/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-minimal/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-minimal/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-renderonce/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-renderonce/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-renderonce/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-renderonce/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-basic/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-basic/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-basic/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-basic/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-languages/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-languages/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-languages/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/examples/ramses-example-text-languages/src" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/include/ramses-capu">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/external/capu/include/ramses-capu" isTestSource="false" />
@@ -469,12 +356,6 @@
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/framework/ramses-framework/src">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/framework/ramses-framework/src" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/ramses-daemon">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/ramses-daemon" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/DisplayManager/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/DisplayManager/src" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/Platform/Context_EGL/src">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/Platform/Context_EGL/src" isTestSource="false" />
     </content>
@@ -510,36 +391,6 @@
     </content>
     <content url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/RendererLib/ramses-renderer-impl/src">
       <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/RendererLib/ramses-renderer-impl/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/ramses-renderer-main/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/renderer/ramses-renderer-main/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-resource-tools/ramses-resource-packer">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-resource-tools/ramses-resource-packer" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-resource-tools/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-resource-tools/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-scene-viewer/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-scene-viewer/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/ramses-effect-from-glsl-shader">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/ramses-effect-from-glsl-shader" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/ramses-shader-from-glsl-shader">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/ramses-shader-from-glsl-shader" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-shader-tools/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-stream-viewer/res">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-stream-viewer/res" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-stream-viewer/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-stream-viewer/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-utils/src">
-      <sourceFolder url="file://$MODULE_DIR$/../../external/ramses-sdk/utils/ramses-utils/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

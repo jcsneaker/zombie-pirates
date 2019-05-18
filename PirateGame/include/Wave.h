@@ -14,7 +14,7 @@
 //#include <mmsystem.h>
 #include <iostream>
 #include <fstream>
-#include <conio.h>
+//#include <conio.h>
 #include <assert.h>
 
 using namespace ramses;

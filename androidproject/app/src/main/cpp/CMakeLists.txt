@@ -18,7 +18,7 @@ add_library(gles3jni SHARED
 
 # Include libraries needed for gles3jni lib
 target_link_libraries(gles3jni
-            ramses-shared-lib-android-egl-es-3-0
+        ZombiePiratesGame
             GLESv3
             android
             EGL

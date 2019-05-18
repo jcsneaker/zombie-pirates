@@ -15,6 +15,7 @@ set(ramses-sdk_BUILD_EXAMPLES                   OFF CACHE BOOL "Build Example ta
 # Enable/disable renderer
 set(RND_WINDOWS OFF)
 set(RND_LINUX   OFF)
+set(RND_ANDROID OFF)
 set(RND_GENERIC OFF)
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
@@ -24,6 +25,11 @@ endif()
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(RND_LINUX ON)
+    set(RND_GENERIC ON)
+endif()
+
+if(${CMAKE_SYSTEM_NAME} MATCHES "Android")
+    set(RND_ANDROID ON)
     set(RND_GENERIC ON)
 endif()
 
@@ -55,10 +61,16 @@ set(ramses-sdk_renderer_Platform_Platform_Windows_WGL_4_2_core ${RND_WINDOWS} CA
 set(ramses-sdk_renderer_Platform_Surface_Windows_WGL           ${RND_WINDOWS} CACHE STRING "")
 set(ramses-sdk_renderer_Platform_Window_Windows                ${RND_WINDOWS} CACHE STRING "")
 
-set(ramses-sdk_renderer_Platform_Context_EGL                   ${RND_LINUX} CACHE STRING "")
+IF ( ${RND_LINUX} OR  ${RND_ANDROID})
+set(ramses-sdk_renderer_Platform_Context_EGL                   ON CACHE STRING "")
+ENDIF()
 set(ramses-sdk_renderer_Platform_Platform_X11_EGL_ES_3_0       ${RND_LINUX} CACHE STRING "")
 set(ramses-sdk_renderer_Platform_Surface_X11_EGL               ${RND_LINUX} CACHE STRING "")
 set(ramses-sdk_renderer_Platform_Window_X11                    ${RND_LINUX} CACHE STRING "")
+
+set(ramses-sdk_renderer_Platform_Platform_Android_EGL_ES_3_0       ${RND_ANDROID} CACHE STRING "")
+set(ramses-sdk_renderer_Platform_Surface_Android_EGL               ${RND_ANDROID} CACHE STRING "")
+set(ramses-sdk_renderer_Platform_Window_Android                    ${RND_ANDROID} CACHE STRING "")
 
 set(ramses-sdk_renderer_Platform_WaylandUtilities                          OFF CACHE STRING "")
 set(ramses-sdk_renderer_Platform_SystemCompositorController_Wayland_IVI    OFF CACHE STRING "")

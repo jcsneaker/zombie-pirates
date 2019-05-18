@@ -11,6 +11,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.3)
 
 project (ZombiePiratesGame)
 
+
 set (ZombiePiratesGame_VERSION_MAJOR 0)
 set (ZombiePiratesGame_VERSION_MINOR 1)
 
@@ -29,6 +30,8 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     set(RND_PLATFORM platform-windows-wgl-4-2-core)
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(RND_PLATFORM platform-x11-egl-es-3-0)
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Android")
+    set(RND_PLATFORM platform-android-egl-es-3-0)
 endif()
 
 set(ramses_dependencies
@@ -40,7 +43,13 @@ set(ramses_dependencies
 	ramses-framework-api
 	ramses-framework)
 
+IF (${CMAKE_SYSTEM_NAME} MATCHES "Android")
+add_library(ZombiePiratesGame SHARED
+            ${source_files})
+ELSE()
 add_executable(ZombiePiratesGame ${source_files})
+ENDIF()
+
 target_link_libraries(ZombiePiratesGame ${ramses_dependencies})
 target_include_directories(ZombiePiratesGame PRIVATE PirateGame/include)
 

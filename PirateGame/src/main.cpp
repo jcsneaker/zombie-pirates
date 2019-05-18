@@ -7,10 +7,10 @@
 //  contents is not permitted without prior written authorization.
 //  -------------------------------------------------------------------------
 
-#include "PirateGame.h"
-
-int main(int argc, char* argv[])
-{
-    PirateGame game(argc, argv);
-    game.run();
-}
+//#include "PirateGame.h"
+//
+//int main(int argc, char* argv[])
+//{
+//    PirateGame game(argc, argv);
+//    game.run();
+//}

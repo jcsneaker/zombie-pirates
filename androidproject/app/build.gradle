@@ -17,7 +17,7 @@ android {
                         "-Dramses-sdk_BUILD_SMOKE_TESTS=OFF",
                 "-Dramses-sdk_ENABLE_TCP_SUPPORT=OFF",
                 "-Dramses-sdk_BUILD_TESTS=OFF"
-                targets "ramses-shared-lib-android-egl-es-3-0",
+                targets "ZombiePiratesGame",
                         "gles3jni"
             }
         }

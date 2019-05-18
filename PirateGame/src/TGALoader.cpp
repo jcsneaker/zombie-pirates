@@ -72,7 +72,7 @@ namespace ramses_internal
         case 5:
             break;
         default:
-            return false;
+            return nullptr;
         }
 
         // GIMP exporter bug
