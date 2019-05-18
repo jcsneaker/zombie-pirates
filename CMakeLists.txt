@@ -14,8 +14,8 @@ project (ZombiePiratesGame)
 set (ZombiePiratesGame_VERSION_MAJOR 0)
 set (ZombiePiratesGame_VERSION_MINOR 1)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
+#set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
 add_subdirectory(external)
 
@@ -56,6 +56,6 @@ file(GLOB_RECURSE ASSETS
 )
 
 foreach(asset ${ASSETS})
-  file(RELATIVE_PATH relativePath ${PROJECT_SOURCE_DIR} ${asset})
-  configure_file(${relativePath} ${CMAKE_CURRENT_BINARY_DIR}/${relativePath} COPYONLY)
+  file(RELATIVE_PATH relativePath ${PROJECT_SOURCE_DIR}/PirateGame ${asset})
+  configure_file(PirateGame/${relativePath} ${CMAKE_CURRENT_BINARY_DIR}/${relativePath} COPYONLY)
 endforeach()
