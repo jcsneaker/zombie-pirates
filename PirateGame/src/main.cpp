@@ -13,8 +13,8 @@
 
 int main(int argc, char* argv[])
 {
-    const int32_t width = 1480;
-    const int32_t height = 980;
+    const int32_t width = 600;
+    const int32_t height = 800;
 
     PirateGame game(argc, argv, width, height);
 
