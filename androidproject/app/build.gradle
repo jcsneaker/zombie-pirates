@@ -18,7 +18,7 @@ android {
                 "-Dramses-sdk_ENABLE_TCP_SUPPORT=OFF",
                 "-Dramses-sdk_BUILD_TESTS=OFF"
                 targets "ZombiePiratesGame",
-                        "gles3jni"
+                        "zombiepirates_android"
             }
         }
         ndk {

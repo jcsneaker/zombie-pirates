@@ -20,7 +20,7 @@
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_de_bmw_ramses_RamsesTriangleRenderer_load(JNIEnv *env, jobject obj, jobject assetManager){
+Java_de_zombiepirates_load(JNIEnv *env, jobject obj, jobject assetManager){
     AAssetManager *mgr = AAssetManager_fromJava(env, assetManager);
     if (mgr == NULL) {
         __android_log_print(ANDROID_LOG_ERROR, "name.cpp", "error loading asset manager");
@@ -33,7 +33,7 @@ Java_de_bmw_ramses_RamsesTriangleRenderer_load(JNIEnv *env, jobject obj, jobject
 
 extern "C"
 JNIEXPORT jlong JNICALL
-Java_de_bmw_ramses_RamsesTriangleRenderer_createTriangleRendererNative(JNIEnv *env, jobject instance,
+Java_de_zombiepirates_GameRenderer_createGameNative(JNIEnv *env, jobject instance,
                                                              jobject surface, jint width,
                                                              jint height) {
 
@@ -47,7 +47,7 @@ Java_de_bmw_ramses_RamsesTriangleRenderer_createTriangleRendererNative(JNIEnv *e
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_de_bmw_ramses_RamsesTriangleRenderer_disposeTriangleRendererNative(JNIEnv* /*env*/, jobject /*instance*/,
+Java_de_zombiepirates_GameRenderer_disposeGameNative(JNIEnv* /*env*/, jobject /*instance*/,
                                                               jlong handle) {
     delete reinterpret_cast<TriangleRenderer*>(handle);
 }

@@ -1,4 +1,4 @@
-package de.bmw.ramsestrianglerenderer;
+package de.zombiepirates;
 
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
@@ -8,13 +8,11 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.app.Activity;
 
-import de.bmw.ramses.RamsesTriangleRenderer;
-
-public class MainActivity extends Activity implements SurfaceHolder.Callback{
+public class GameActivity extends Activity implements SurfaceHolder.Callback{
     private AssetManager mgr;
     MediaPlayer mPlayer;
     static {
-        System.loadLibrary("gles3jni");
+        System.loadLibrary("zombiepirates_android");
         Log.v("MyActivity", "loaded lib");
     }
 ;
@@ -61,19 +59,19 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         Log.v("MyActivity", "surfaceChanged");
-        if (ramsesTriangleRenderer != null)
+        if (gameRenderer != null)
         {
-            ramsesTriangleRenderer.dispose();
+            gameRenderer.dispose();
         }
 
-        ramsesTriangleRenderer = new RamsesTriangleRenderer(holder.getSurface(),mgr, width, height);
+        gameRenderer = new GameRenderer(holder.getSurface(),mgr, width, height);
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-        ramsesTriangleRenderer.dispose();
-        ramsesTriangleRenderer = null;
+        gameRenderer.dispose();
+        gameRenderer = null;
     }
 
-    private RamsesTriangleRenderer ramsesTriangleRenderer;
+    private GameRenderer gameRenderer;
 }
